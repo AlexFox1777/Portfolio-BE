@@ -15,9 +15,9 @@ router.post('/send', (req, res) => {
             user: process.env.EMAIL,
             pass: process.env.CODE,
         },
-        tls: {
+       /* tls: {
             rejectUnauthorized: false
-        }
+        }*/
     });
 
     const mailOptions = {
