@@ -29,7 +29,7 @@ router.post('/send', (req, res) => {
 
     transporter.sendMail(mailOptions, (err, data) => {
         if (err) {
-            res.status(500).json('error occurred')
+            res.status(500).json(err)
         } else {
             res.status(201).json('email was send')
         }
